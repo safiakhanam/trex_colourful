@@ -73,8 +73,8 @@ function draw() {
     //score = score + 5;
     ground.velocityX = -(6 + 3 * score / 100);
 	
-	if((touches.length > 0 || keyDown("SPACE")) && trex.y  >= height-120) {
-    //if (touches.length > 0 && trex.y >= height - 120) {
+	//if((touches.length > 0 || keyDown("SPACE")) && trex.y  >= height-120) {
+    if (touches.length > 0 && trex.y >= height - 120) {
       //  if (touches.length > 0) {
       jumpSound.play()
       trex.velocityY = -10;
@@ -106,8 +106,8 @@ function draw() {
     obstaclesGroup.setLifetimeEach(-1);
     cloudsGroup.setLifetimeEach(-1);
 	
-	if(touches.length>0 || keyDown("SPACE")) {
-    //if (touches.length > 0) {
+	//if(touches.length>0 || keyDown("SPACE")) {
+    if (touches.length > 0) {
       if (restart.overlapPoint(touches[0].x, touches[0].y)) {
         reset();
         touches = []
